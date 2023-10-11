@@ -2,6 +2,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 /* Base Classes --------------------------------------------------------*/
+/* Megan */
 body {
     background-color: #1E1E1E;
 }
@@ -180,6 +181,7 @@ footer {
     height: 50vh;
 }
 
+/* ---------------------------------------------- */
 /* Library page */
 #filter-group {
     height: 10vh;
@@ -211,6 +213,8 @@ footer {
     margin-top: 5vh;
     margin-bottom: 2vh;
 }
+
+
 /*Forms styling-----------------------------------------------------------*/
 /*Sign Up----------*/
 
@@ -292,6 +296,8 @@ button-su:hover {
 .forgot-password{
     padding-top: -400px;
 }
+
+
 /*Sign In-------------------------------------------------*/
 .container-form-si {
     background-color: #3662D4;
