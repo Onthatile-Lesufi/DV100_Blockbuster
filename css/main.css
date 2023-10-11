@@ -25,24 +25,25 @@ p {
     background-color: white;
     border-radius: 30px;
     margin-left: 230px;
+    background-image: url(../assets/Logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #3662D4;
 }
-
 h2 {
     text-align: center;
     color: #333;
+    padding-top: 5px;
 }
-
 .form-group {
     margin-bottom: 20px;
     margin-left: 125px;
 }
-
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -52,7 +53,6 @@ input[type="password"] {
     border-radius: 5px;
 
 }
-
 button-su {
     background-color: white;
     color: black;
@@ -60,16 +60,16 @@ button-su {
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    width: 250px;
-    margin-left: 50px;
+    width: 200px;
+    padding-left: -50px;
+    margin-left: 80px;
     margin-top: 50px;
+    height: 65px;
 
 }
-
 button-su:hover {
     background-color: #0056b3;
 }
-
 .form-check{
     margin-left: 125px;
 }
@@ -81,7 +81,7 @@ button-su:hover {
 .forgot-password{
     padding-top: -400px;
 }
-/*Sign In----------*/
+/*Sign In-------------------------------------------------*/
 .container-form-si {
     background-color: #3662D4;
     border-radius: 10px;
@@ -99,17 +99,14 @@ button-su:hover {
     border-radius: 30px;
     margin-left: 230px;
 }
-
 h2 {
     text-align: center;
     color: #333;
 }
-
 .form-group {
     margin-bottom: 20px;
     margin-left: 125px;
 }
-
 label {
     font-weight: bold;
     display: block;
@@ -118,7 +115,6 @@ label {
 .form-check-label{
     width: 200px;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -128,7 +124,6 @@ input[type="password"] {
     border-radius: 5px;
 
 }
-
 button-si {
     background-color: white;
     color: black;
@@ -137,14 +132,14 @@ button-si {
     padding: 10px 20px;
     cursor: pointer;
     width: 250px;
+    height: 60px;
     margin-left: 200px;
     margin-top: 50px;
+    padding-top: 15px;
 }
-
 button-si:hover {
     background-color: #0056b3;
 }
-
 .form-check{
     margin-left: 125px;
 }
@@ -152,7 +147,4 @@ button-si:hover {
     padding-left: 390px;
     color: white;
     margin-top: -100px;
-}
-.forgot-password{
-    padding-top: -400px;
 }
