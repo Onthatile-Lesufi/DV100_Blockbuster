@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(document).ready(function () {
     $.ajax({
         url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
@@ -84,7 +84,7 @@ loadMovieCards = (movies) => {
         window.location.href = `pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
     })
 }
-=======
+
 /////////////////////////////////////////////////////////////////////////
 ///////////sign up page and sign in page//////////
 $(document).ready(function() {
@@ -114,5 +114,7 @@ $(document).ready(function() {
     const regex = /^(?=.*[A-Z])(?=.*\d)/;
     return regex.test(password);
   }
+
 });
->>>>>>> jade
+
+
