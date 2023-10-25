@@ -9,41 +9,25 @@ p {
 
 /*Forms styling-----------------------------------------------------------*/
 /*Sign Up----------*/
-.container-form-su {
-    background-color: #3662D4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 700px;
-    margin-top: 50px;
-    margin-left: 400px;
+/* Base Classes --------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
 }
-.col-box-form{
-    margin-bottom: 20px;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border-radius: 30px;
-    margin-left: 230px;
-    background-image: url(../assets/Logo.jpg);
-    background-position: center;
-    background-size: cover;
-    background-color: #3662D4;
+
+p {
+    font-family: 'Abel', sans-serif;
 }
-h2 {
-    text-align: center;
-    color: #333;
-    padding-top: 5px;
-}
+
+/* Common Styles ------------------------------------------------------*/
 .form-group {
     margin-bottom: 20px;
     margin-left: 125px;
 }
+
 label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
+    font-size: 16px; /* Reduce font size for labels */
+  }
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -51,9 +35,21 @@ input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
 }
-button-su {
+
+.form-check {
+    margin-left: 125px;
+}
+
+.link-opacity-75 {
+    padding-left: 390px;
+    color: white;
+    margin-top: -100px;
+}
+
+/* Common Button Styles ------------------------------------------------*/
+.button-su,
+.button-si {
     background-color: white;
     color: black;
     border: none;
@@ -61,90 +57,78 @@ button-su {
     padding: 10px 20px;
     cursor: pointer;
     width: 200px;
-    padding-left: -50px;
     margin-left: 80px;
-    margin-top: 50px;
     height: 65px;
-
 }
-button-su:hover {
+
+.button-su:hover,
+.button-si:hover {
     background-color: #0056b3;
 }
-.form-check{
-    margin-left: 125px;
-}
-.link-opacity-75{
-    padding-left: 390px;
-    color: white;
-    margin-top: -100px;
-}
-.forgot-password{
-    padding-top: -400px;
-}
-/*Sign In-------------------------------------------------*/
+
+/* Form Container Styles ------------------------------------------------*/
+.container-form-su,
 .container-form-si {
     background-color: #3662D4;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 700px;
-    margin-top: 50px;
-    margin-left: 400px;
+    width: 90%; /* Make the container width responsive */
+    margin: 50px auto; /* Center the container horizontally */
 }
-.col-box-form{
+
+.col-box-form {
     margin-bottom: 20px;
     width: 200px;
     height: 150px;
     background-color: white;
     border-radius: 30px;
-    margin-left: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../assets/Logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #3662D4;
 }
+
 h2 {
     text-align: center;
     color: #333;
+    padding-top: 5px;
 }
-.form-group {
-    margin-bottom: 20px;
-    margin-left: 125px;
-}
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: px;
-}
-.form-check-label{
-    width: 200px;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 400px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 
+.forgot-password {
+    padding-top: -400px;
 }
-button-si {
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 250px;
-    height: 60px;
-    margin-left: 200px;
-    margin-top: 50px;
-    padding-top: 15px;
-}
-button-si:hover {
-    background-color: #0056b3;
-}
-.form-check{
-    margin-left: 125px;
-}
-.link-opacity-75{
-    padding-left: 390px;
-    color: white;
-    margin-top: -100px;
-}
+
+/* Media Queries for Responsive Design ----------------------------------- */
+@media (max-width: 768px) {
+    /* Styles for screens with a maximum width of 768px (tablets and smaller) */
+    .container-form-su,
+    .container-form-si {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%; /* Make input fields full-width */
+      padding: 8px; /* Reduce padding for smaller screens */
+    }
+  
+    label {
+      font-size: 16px; /* Reduce font size for labels */
+    }
+  
+    .button-su,
+    .button-si {
+      width: 100%; /* Make buttons full-width */
+      margin: 0; /* Reset margin to center buttons */
+      height: 50px; /* Reduce button height for smaller screens */
+    }
+  
+    h2 {
+      font-size: 24px; /* Reduce font size for headings */
+    }
+  }
+  
