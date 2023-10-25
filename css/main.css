@@ -38,12 +38,13 @@ input[type="password"] {
 }
 
 .form-check {
-    margin-left: 125px;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 .link-opacity-75 {
     padding-left: 390px;
-    color: white;
+    color: #3662D4;
     margin-top: -100px;
 }
 
@@ -91,44 +92,15 @@ input[type="password"] {
     background-color: #3662D4;
 }
 
-h2 {
+
+h2,h3,h1 {
     text-align: center;
     color: #333;
     padding-top: 5px;
+    
 }
 
 .forgot-password {
     padding-top: -400px;
 }
 
-/* Media Queries for Responsive Design ----------------------------------- */
-@media (max-width: 768px) {
-    /* Styles for screens with a maximum width of 768px (tablets and smaller) */
-    .container-form-su,
-    .container-form-si {
-      padding: 10px; /* Reduce padding for smaller screens */
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%; /* Make input fields full-width */
-      padding: 8px; /* Reduce padding for smaller screens */
-    }
-  
-    label {
-      font-size: 16px; /* Reduce font size for labels */
-    }
-  
-    .button-su,
-    .button-si {
-      width: 100%; /* Make buttons full-width */
-      margin: 0; /* Reset margin to center buttons */
-      height: 50px; /* Reduce button height for smaller screens */
-    }
-  
-    h2 {
-      font-size: 24px; /* Reduce font size for headings */
-    }
-  }
-  

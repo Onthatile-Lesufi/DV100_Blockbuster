@@ -1,46 +1,30 @@
 /////////////////////////////////////////////////////////////////////////
 ///////////sign up page and sign in page//////////
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('signup-form');
-    const signUpButton = document.getElementById('sign-up-button');
-    const signInButton = document.getElementById('sign-in-button');
-    
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const username = form.elements.username.value;
-      const email = form.elements.email.value;
-      const password = form.elements.password.value;
-  
-      if (!validateEmail(email)) {
-        alert('Invalid email address');
-        return;
+$(document).ready(function() {
+  //-----------------------------------------------------------
+  //-sign up form------------------------------
+  //-----------------------------------------------------------
+  $('#sign-up-form').submit(function(event) {
+    event.preventDefault();
+    if (this.checkValidity() === false) {
+      event.stopPropagation();
+    } else {
+      // Check if the password meets the criteria
+      const password = $('#password').val();
+      if (isPasswordValid(password)) {
+        // Any code that should run when the password is valid
+        window.location.href = 'pages/index.html';
+      } else {
+        // Display an error message or take appropriate action
+        alert('Password must contain at least one capital letter and one number.');
       }
-  
-      // Save user data to local storage
-      const userData = {
-        username,
-        email,
-        password,
-      };
-      localStorage.setItem('userData', JSON.stringify(userData));
-  
-      // Clear the form fields
-      form.reset();
-  
-      // You can redirect to the home page or perform other actions here
-    });
-  
-    signUpButton.addEventListener('click', function () {
-      // Perform sign-up action here
-    });
-  
-    signInButton.addEventListener('click', function () {
-      // Perform sign-in action here
-    });
-  
-    function validateEmail(email) {
-      // Basic email validation (customize as needed)
-      const emailPattern = /\S+@\S+\.\S+/;
-      return emailPattern.test(email);
     }
+    $(this).addClass('was-validated');
   });
+
+  function isPasswordValid(password) {
+    // Define a regular expression to check for a capital letter and a number
+    const regex = /^(?=.*[A-Z])(?=.*\d)/;
+    return regex.test(password);
+  }
+});
