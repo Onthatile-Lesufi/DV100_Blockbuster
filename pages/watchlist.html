@@ -1,138 +1,120 @@
-<!doctype html>
-<html lang="en" data-bs-theme="dark">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Blockbuster Watch-list</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockbuster: Single Movie</title>
+    <!-- External Documents -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        <!-- Style Sheet -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link src="../css/main.css" rel="stylesheet">
-    </head>
-    <body class="bg-dark-subtle">
+    <!-- Internal Documents -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../JS/index.js"></script>
+  
+  </head>
+  <body>
+    <nav class="navbar fixed-top mb-5">
+      <div class="container mb-3">
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html"><img src="../assets/Logo with layer.png" alt="logo.png" style="height: 100px;"></a>
 
-    <!-------------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
 
-           <!-- Logo -->
-          <a class="navbar-brand" href="#">
-            <img src="../assets/Logo 1.png" alt="...">
-          </a>
-
-          <!-- Nav Items -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/library.html">Library</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="../pages/watchlist.html">Watch List</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <a href="sign in.html"><img src="../assets/profile.svg" alt="profile.svg"></a>
-          </div>
-        </div>
+        <!-- Nav items -->
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="../index.html"><P class="nav-link">Home</P></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><P class="nav-link">Library</P></a>
+          </li>
+          <li class="nav-item">
+            <a href="watchlist.html"><P class="nav-link active">Watchlist</P></a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link"></div>
+          </li>
+          <li class="nav-item">
+            <a href="sign in.html"><div class="nav-link profile"><img src="../assets/profile.svg" alt="profile svg"></div></a>
+          </li>
+          <li class="nav-item">
+            <a type="button" class="btn btn-dark w-auto" href="../index.html"></a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- Page Content  -->
-    <div class="container">
-        <div class="row align-content-center">
-            <div class="col-12 col-md-6 mb-2 mt-3">
-                <img src="../assets/Lost ark 3.jpeg" class="card-img">
-            </div>
-            <div class="col-12 col-md-6 mt-3">
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Raiders of The Lost Ark</h5>
-                      <span class="badge rounded-pill text-bg-secondary">Adventure</span>
-                      <span class="badge rounded-pill text-bg-secondary">Action</span>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: 1981</h6>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: 1h 55min</h6>
-                      <p class="card-text">Raiders of the Lost Ark is a 1981 American action-adventure film directed by Steven Spielberg from a screenplay by Lawrence Kasdan, based on a story by George Lucas and Philip Kaufman. Set in 1936, the film stars Harrison Ford as Indiana Jones, a globetrotting archaeologist vying with Nazi German forces to recover the long-lost Ark of the Covenant which is said to make an army invincible. Teaming up with his tough former romantic interest Marion Ravenwood (Karen Allen), Jones races to stop rival archaeologist Dr. René Belloq (Paul Freeman) from guiding the Nazis to the Ark and its power.</p>
-                      <a href="../pages/movie.html" class="card-link">View</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-        <div class="row align-content-center">
-            <div class="col-12 col-md-6 mb-2 mt-3">
-                <img src="../assets/Titanic.jpeg" class="card-img">
-            </div>
-            <div class="col-12 col-md-6 mt-3">
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Titanic</h5>
-                      <span class="badge rounded-pill text-bg-secondary">Drama</span>
-                      <span class="badge rounded-pill text-bg-secondary">Melodrama</span>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: 1997</h6>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: 3h 14min</h6>
-                      <p class="card-text">Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.</p>
-                      <a href="#" class="card-link">View</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-        <div class="row align-content-center">
-            <div class="col-12 col-md-6 mb-2 mt-3">
-                <img src="../assets/Return of the jedi.jpeg" class="card-img">
-            </div>
-            <div class="col-12 col-md-6 mt-3">
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Star Wars: Return of the Jedi</h5>
-                      <span class="badge rounded-pill text-bg-secondary">Sci-fi</span>
-                      <span class="badge rounded-pill text-bg-secondary">Action</span>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: 1983</h6>
-                      <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: 2h 11min</h6>
-                      <p class="card-text">Set one year after The Empire Strikes Back, the Galactic Empire is constructing a second Death Star to exterminate the Rebel Alliance. With intel that the Emperor will be on board, the Rebel fleet launches a full-scale attack on the Death Star in hopes of both destroying it and the Emperor. Meanwhile, Rebel hero Luke Skywalker, now a Jedi Knight, struggles to bring his father, Darth Vader, back to the light side of the Force.</p>
-                      <a href="#" class="card-link">View</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </div>
-
-        <!----------------------------------------------------------------------------------------------------------------------------------------->
-        <!-- Footer -->
-        <div class="row mt-5 mb-4">
-          <div class="col-8"></div>
-          <div class="col-4 mt-5 px-sm-5">
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="float: right;">
-                <div class="btn-group me-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-primary"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></button>
-                </div>
-                <div class="btn-group me-2" role="group" aria-label="Second group">
-                  <button type="button" class="btn btn-primary"><i class="bi bi-facebook" style="font-size: 2rem;"></i></button>
-                </div>
-                <div class="btn-group me-2" role="group" aria-label="Third group">
-                  <button type="button" class="btn btn-primary"><i class="bi bi-instagram" style="font-size: 2rem;"></i></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Fourth group">
-                  <button type="button" class="btn btn-primary"><i class="bi bi-youtube" style="font-size: 2rem;"></i></button>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2 mt-5">
+              <img src="../assets/Lost ark 3.jpeg" class="card-img watchlist-card-img">
+          </div>
+          <div class="col-12 col-md-6 mt-5">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Raiders of The Lost Ark</h3>
+                  <span class="badge rounded-pill text-bg-secondary">Adventure</span>
+                  <span class="badge rounded-pill text-bg-secondary">Action</span>
+                  <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: 1981</h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: 1h 55min</h6>
+                  <p class="card-text">Raiders of the Lost Ark is a 1981 American action-adventure film directed by Steven Spielberg from a screenplay by Lawrence Kasdan, based on a story by George Lucas and Philip Kaufman. Set in 1936, the film stars Harrison Ford as Indiana Jones, a globetrotting archaeologist vying with Nazi German forces to recover the long-lost Ark of the Covenant which is said to make an army invincible. Teaming up with his tough former romantic interest Marion Ravenwood (Karen Allen), Jones races to stop rival archaeologist Dr. René Belloq (Paul Freeman) from guiding the Nazis to the Ark and its power.</p>
+                  <a href="../pages/movie.html" class="card-link">View</a>
                 </div>
               </div>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2 mt-3">
+              <img src="../assets/Titanic.jpeg" class="card-img watchlist-card-img">
+          </div>
+          <div class="col-12 col-md-6 mt-3">
+              <div class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Titanic</h3>
+                    <span class="badge rounded-pill text-bg-secondary">Drama</span>
+                    <span class="badge rounded-pill text-bg-secondary">Melodrama</span>
+                    <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: 1997</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: 3h 14min</h6>
+                    <p class="card-text">Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.</p>
+                    <a href="../pages/movie.html" class="btn btn-primary" role="button" data-bs-toggle="button" id="viewMovie" onclick="">View</a>
+                  </div>
+                </div>
+          </div>
+        </div>
 
-        <!-- Javascript -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="../scripts/main.js"></script>
-    </body>
+        <!-- Watch List Template -->
+        <template id="movieWatchCardTemplate">
+          <!------------------------------------------------------------------------------------------>
+          <!-- Movie Card List-->
+
+          <div class="row">
+            <div class="col-12 col-md-6 mb-2 mt-3">
+                  <img src="../assets/Return of the jedi.jpeg" class="card-img watchlist-card-img">
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title" id="movieTitle">Star Wars: Return of the Jedi</h3>
+                  <span class="badge rounded-pill text-bg-secondary" id="movieGenre1">Sci-fi</span>
+                  <span class="badge rounded-pill text-bg-secondary" id="movieGenre2">Action</span>
+                  <h6 class="card-subtitle mb-2 text-body-secondary pt-3" id="releaseDateText">Release Date: 1983</h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary pt-3" id="runTime">Run Time: 2h 11min</h6>
+                  <p class="card-text" id="movieCaption">Set one year after The Empire Strikes Back, the Galactic Empire is constructing a second Death Star to exterminate the Rebel Alliance. With intel that the Emperor will be on board, the Rebel fleet launches a full-scale attack on the Death Star in hopes of both destroying it and the Emperor. Meanwhile, Rebel hero Luke Skywalker, now a Jedi Knight, struggles to bring his father, Darth Vader, back to the light side of the Force.</p>
+                  <a href="../pages/movie.html" class="btn" role="button" data-bs-toggle="button" id="viewMovie" onclick="">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+
+    <footer id="watchlist-footer"></footer>
+  </body>
 </html>
