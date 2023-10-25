@@ -62,7 +62,7 @@ footer {
     background: -moz-linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
     color: #ffffff;
     padding-left: 15vw;
-    padding-top: 20vh;
+    padding-top: 15vh;
 }
 
 .title {
@@ -129,6 +129,11 @@ footer {
     height: 50vh;
 }
 
+#movieCard:hover {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
 /* Library page */
 #filter-group {
     height: 10vh;
