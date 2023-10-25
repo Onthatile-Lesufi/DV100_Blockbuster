@@ -112,4 +112,5 @@ $(document).ready(function() {
     const regex = /^(?=.*[A-Z])(?=.*\d)/;
     return regex.test(password);
   }
+
 });
