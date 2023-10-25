@@ -1,0 +1,34 @@
+$(document).ready(function () {
+    $.ajax({
+        url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            let movies = data.results;
+            console.log(movies);
+            loadRatedCards(movies);
+        } 
+    })
+})
+
+loadRatedCards = (movies) => {
+    $('#ratedRow').empty();
+    for (let i = 0; i<8; i++) {
+        const card = $(`
+        <div class="col-6 col-xs-6 col-sm-6 col-md4 col-lg-3" id='movieCard'>
+            <div class="card" data-id='${movies[i].id}'>
+                <img src="https://image.tmdb.org/t/p/original${movies[i].poster_path}" class="card-img-top" alt="movie.png">
+                <div class="card-body">
+                    <h3 class="card-title" id="nameText">${movies[i].title}</h3>
+                    <p>Rating: ${movies[i].vote_average}</p>
+                </div>
+            </div>
+        </div>`)
+
+        $('#ratedRow').append(card);
+    }
+
+    $('#movieCard').click(function(){
+        window.location.href = `pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
+    })
+}
