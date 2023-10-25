@@ -284,6 +284,7 @@ footer {
 
 /*Forms styling-----------------------------------------------------------*/
 /*Sign Up----------*/
+<<<<<<< HEAD
 
 .container-form-su {
     background-color: #3662D4;
@@ -314,16 +315,33 @@ footer {
     padding-top: 5px;
 }
 
+=======
+/* Base Classes --------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+/* Common Styles ------------------------------------------------------*/
+>>>>>>> jade
 .form-group {
     margin-bottom: 20px;
     margin-left: 125px;
 }
 
 label {
+<<<<<<< HEAD
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
+=======
+    font-size: 16px; /* Reduce font size for labels */
+  }
+>>>>>>> jade
 
 input[type="text"],
 input[type="email"],
@@ -332,10 +350,26 @@ input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
 }
 
+<<<<<<< HEAD
 button-su {
+=======
+.form-check {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.link-opacity-75 {
+    padding-left: 390px;
+    color: #3662D4;
+    margin-top: -100px;
+}
+
+/* Common Button Styles ------------------------------------------------*/
+.button-su,
+.button-si {
+>>>>>>> jade
     background-color: white;
     color: black;
     border: none;
@@ -343,15 +377,15 @@ button-su {
     padding: 10px 20px;
     cursor: pointer;
     width: 200px;
-    padding-left: -50px;
     margin-left: 80px;
-    margin-top: 50px;
     height: 65px;
-
 }
-button-su:hover {
+
+.button-su:hover,
+.button-si:hover {
     background-color: #0056b3;
 }
+<<<<<<< HEAD
 .form-check{
     margin-left: 125px;
 }
@@ -366,24 +400,35 @@ button-su:hover {
 
 
 /*Sign In-------------------------------------------------*/
+=======
+
+/* Form Container Styles ------------------------------------------------*/
+.container-form-su,
+>>>>>>> jade
 .container-form-si {
     background-color: #3662D4;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 700px;
-    margin-top: 50px;
-    margin-left: 400px;
+    width: 90%; /* Make the container width responsive */
+    margin: 50px auto; /* Center the container horizontally */
 }
-.col-box-form{
+
+.col-box-form {
     margin-bottom: 20px;
     width: 200px;
     height: 150px;
     background-color: white;
     border-radius: 30px;
-    margin-left: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../assets/Logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #3662D4;
 }
 
+<<<<<<< HEAD
 .form-group {
     margin-bottom: 20px;
     margin-left: 125px;
@@ -399,8 +444,20 @@ input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+=======
 
+h2,h3,h1 {
+    text-align: center;
+    color: #333;
+    padding-top: 5px;
+    
 }
+>>>>>>> jade
+
+.forgot-password {
+    padding-top: -400px;
+}
+<<<<<<< HEAD
 button-si {
     background-color: white;
     color: black;
@@ -425,3 +482,6 @@ button-si:hover {
     padding-left: 390px;
     color: white;
     margin-top: -100px;
+=======
+
+>>>>>>> jade

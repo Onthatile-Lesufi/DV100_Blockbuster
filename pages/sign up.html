@@ -17,7 +17,6 @@
     <script src="../JS/index.js"></script>
     
 </head>
-<<<<<<< Updated upstream
 <body  class="bg-dark">
 
    
@@ -59,9 +58,12 @@
             </div>
         </nav>
     
+        
+        
 
  <!------------------------------------------------------------------------------------------------------------>
  <!-----Form sign up------->
+<<<<<<< HEAD
   <div class="container-form-su">
     <div class="col-box-form">
     </div>
@@ -70,28 +72,46 @@
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
+=======
+   <div class="container-form-su mt-5 vh-100">
+    <div class="row justify-content-center pt-5" >
+      <div class="col-md-6 mt-5 card rounded-4 p-5">
+        <div class="col-box-form bg-dark">
+>>>>>>> jade
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Remember Me
-            </label>
+        <h1>RELIVE THE OLD DAYS</h1>
+        <h2>SIGN UP</h2>
+        <form id="sign-up-form" class="mt-5" novalidate="">
+          <div class="form-group">
+            <label>Username:</label>
+            <input class="form-control" name="username" id="username" type="text" required>
+            <div class="invalid-feedback">Please Enter Valid Username</div>
           </div>
-          <div class="forgot-password">
+          <div class="form-group">
+            <label>Email Address:</label>
+            <input class="form-control" name="email" id="email" type="email" required>
+            <div class="invalid-feedback">Please Enter Valid Email Address</div>
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input class="form-control" name="password" id="password" type="password" minlength="6" required>
+            <div class="invalid-feedback">Password must be 6 characters long</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Remember Me
+              </label>
+            </div>
+            <div class="forgot-password">
             <p><a class="link-opacity-75" href="#">Forgot Your Password?</a></p>
           </div>
-        <button-su type="submit"><b><h2>Sign Up</h2></b></button-su>
-        <button-su type="submit"><b><h2>Sign In</h2></b></button-su>
-    </form>
-  </div>
+            <button class="button-su mt-5" type="submit"><h2>SIGN UP</h2></button>
+            <button class="button-su mt-5" type="submit"><h2>LOGIN</h2></button>
+          </div>
+        </form>
+      </div>
+    </div>
+   </div>
 
 
 
@@ -102,3 +122,6 @@
     <script src="../JS/index.js"></script>
 </body>
 </html>
+
+/*------------------------------------------------------------------------------------------------------------
+/*----------<a type="button" class="btn-btn-dark w-auto" href="../index.html">Log Out</a>---------
