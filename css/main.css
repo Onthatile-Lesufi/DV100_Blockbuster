@@ -98,6 +98,10 @@ footer {
 /* ------------------------------------------------ */
 /*  Individual Movie Styling  */
 
+.side-cards{
+    margin-top: 25px;
+}
+
 @media (min-width :768px){
     .right-img {
         width: auto;
