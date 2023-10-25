@@ -1,12 +1,23 @@
 $(document).ready(function () {
     $.ajax({
-        url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
+        url: 'https://api.themoviedb.org/3/trending/movie/week?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
             let movies = data.results;
             console.log(movies);
             loadRatedCards(movies);
+        } 
+    })
+
+    $.ajax({
+        url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            let movies = data.results;
+            console.log(movies);
+            loadMovieCards(movies);
         } 
     })
 })
@@ -28,7 +39,28 @@ loadRatedCards = (movies) => {
         $('#ratedRow').append(card);
     }
 
-    $('#movieCard').click(function(){
-        window.location.href = `pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
+    $('#ratedRow').on('click','#movieCard',function(){
+        window.location.href = `../pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
+    })
+}
+
+loadMovieCards = (movies) => {
+    $('#movieRow').empty();
+    
+    movies.forEach(movie =>{
+        const card = $(`
+        <div class="col-6 col-xs-6 col-sm-6 col-md4 col-lg-3" id='movieCard'>
+            <div class="card" data-id='${movie.id}'>
+                <img src="https://image.tmdb.org/t/p/original${movie.poster_path}" class="card-img-top" alt="movie.png">
+                <div class="card-body">
+                    <h3 class="card-title" id="nameText">${movie.title}</h3>
+                </div>
+            </div>
+        </div>`)
+        $('#movieRow').append(card);
+    });
+
+    $('#movieRow').on('click','#movieCard',function(){
+        window.location.href = `../pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
     })
 }

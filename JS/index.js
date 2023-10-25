@@ -23,14 +23,14 @@ $(document).ready(function () {
             for (let i=0;i<=2;i++){
                 console.log(movies[i]);
                 let hero = $(`
-                <div class="carousel-item">
+                <div class="carousel-item" id='carouselItem'>
                     <img src="https://image.tmdb.org/t/p/original${movies[i].backdrop_path}" class="d-block w-100 slide-img" alt="...">
                     <div class="overlay">
                         <h2 class="title">${movies[i].title}</h2>
                         <p class="description">${movies[i].overview}</p>
                         <!--<p class="cast">Director: <br>Cast: </p>-->
                         <div class="button-group">
-                            <div id="info" data-id='${movies[i].id}'><h3>More Info</h3></div>
+                            <div id='info' data-id='${movies[i].id}'><h3>More Info</h3></div>
                             <div id="watchlist"><h3>Add to Watchlist</h3></div>
                         </div>
                     </div>
@@ -38,14 +38,14 @@ $(document).ready(function () {
 
                 if (i === 0) {
                     hero = $(`
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" id='carouselItem'>
                         <img src="https://image.tmdb.org/t/p/original${movies[i].backdrop_path}" class="d-block w-100 slide-img" alt="...">
                         <div class="overlay">
                             <h2 class="title">${movies[i].title}</h2>
                             <p class="description">${movies[i].overview}</p>
                             <!--<p class="cast">Director: <br>Cast: </p>-->
                             <div class="button-group">
-                                <div id="info" data-id='${movies[i].id}'><h3>More Info</h3></div>
+                                <div id='info' data-id='${movies[i].id}'><h3>More Info</h3></div>
                                 <div id="watchlist"><h3>Add to Watchlist</h3></div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ $(document).ready(function () {
         }
     })
 
-    $('#info').click(function(){
+    $('.button-group').on('click','#info',function(){
         window.location.href = `pages/movie.html?id=${$(this).attr('data-id')}`;
     })
 })
@@ -79,7 +79,7 @@ loadMovieCards = (movies) => {
         $('#movieRow').append(card);
     });
 
-    $('#movieCard').click(function(){
+    $('#movieRow').on('click','#movieCard',function(){
         window.location.href = `pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
     })
 }
