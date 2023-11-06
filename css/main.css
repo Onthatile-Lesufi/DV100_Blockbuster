@@ -1,0 +1,155 @@
+/* Base Classes --------------------------------------------------------*/
+h1, h2, h3, h4, h5, p {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Common Styles ------------------------------------------------------*/
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+label {
+    font-size: 16px;
+}
+
+
+
+.form-check {
+    margin-top: 10px;
+    color: #333;
+}
+
+.link-opacity-75 {
+    color: #3662D4;
+}
+
+
+/* Common Button Styles ------------------------------------------------*/
+.button-su{
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.button-si{
+    background-color: #89DE56;
+    color: white;
+    border: none;
+    border-radius: px;
+    padding: 30px 100px;
+    cursor: pointer;
+    width: 480px;
+    margin-left: -50px;
+    margin-top: 20px;
+    margin-bottom: -150px;
+}
+
+
+.button-su:hover
+ {
+    background-color: white;
+    opacity: 100%;
+    color: #0056b3;
+    border: 2px solid #0056b3 ;
+    
+}
+
+.or-text{
+    padding-left: 170px;
+    padding-top: 10px;
+}
+.button-si:hover {
+    background-color: white;
+    color: #89DE56;
+    border: 2px solid #89DE56 ;
+    
+    
+}
+
+/* Form Container Styles ------------------------------------------------*/
+.container-form-su {
+    background-color: #0056b3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.col-box-form {
+    width: 350px;
+    height: 150px;
+    background-color: #3662D4;
+    border-radius: 50%;
+    border: #333 2px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-left: 50px;
+    background-image: url(../assets/Logo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.form-title {
+    text-align: center;
+    color: #333;
+    margin-top: 70px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #333;
+    margin-top: 120px;
+}
+
+footer {
+    margin: 0;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the links with a hover effect */
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+}
