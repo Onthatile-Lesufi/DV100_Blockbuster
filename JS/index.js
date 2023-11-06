@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $.ajax({
         url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
@@ -86,12 +85,11 @@ loadMovieCards = (movies) => {
 }
 /////////////////////////////////////////////////////////////////////////
 ///////////sign up page and sign in page//////////
-
 $(document).ready(function() {
   //-----------------------------------------------------------
-  //- Form Submit Logic (for both sign-up and sign-in) -------
+  //-sign up form------------------------------
   //-----------------------------------------------------------
-  $('form').submit(function(event) {
+  $('#sign-up-form').submit(function(event) {
     event.preventDefault();
     if (this.checkValidity() === false) {
       event.stopPropagation();
@@ -102,9 +100,8 @@ $(document).ready(function() {
         // Any code that should run when the password is valid
         window.location.href = 'pages/index.html';
       } else {
-        // Display an error message under the input field
-        $('#password-error').text('Password must contain at least one capital letter and one number.');
-        $('#password').addClass('is-invalid');
+        // Display an error message or take appropriate action
+        alert('Password must contain at least one capital letter and one number.');
       }
     }
     $(this).addClass('was-validated');
