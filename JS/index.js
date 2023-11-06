@@ -1,10 +1,8 @@
-/////////////////////////////////////////////////////////////////////////
-///////////sign up page and sign in page//////////
 $(document).ready(function() {
   //-----------------------------------------------------------
-  //-sign up form------------------------------
+  //- Form Submit Logic (for both sign-up and sign-in) -------
   //-----------------------------------------------------------
-  $('#sign-up-form').submit(function(event) {
+  $('form').submit(function(event) {
     event.preventDefault();
     if (this.checkValidity() === false) {
       event.stopPropagation();
@@ -15,8 +13,9 @@ $(document).ready(function() {
         // Any code that should run when the password is valid
         window.location.href = 'pages/index.html';
       } else {
-        // Display an error message or take appropriate action
-        alert('Password must contain at least one capital letter and one number.');
+        // Display an error message under the input field
+        $('#password-error').text('Password must contain at least one capital letter and one number.');
+        $('#password').addClass('is-invalid');
       }
     }
     $(this).addClass('was-validated');
