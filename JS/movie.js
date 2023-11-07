@@ -80,7 +80,7 @@ $(document).ready(function (){
         //Add to watchlist button click event
         $(document).on("click", ".btn-btn-primary", function(){
             let data =JSON.stringify(movie);
-            localStorage.setItem('movie', data);
+            localStorage.setItem('movie');
             $(this).console.log();
         });
     });

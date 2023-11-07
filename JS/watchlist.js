@@ -125,3 +125,4 @@ $(document).ready(function(){
     localStorage.setItem('movies', movies);
 
 });
+
