@@ -15,7 +15,6 @@
         <!-- Internal Documents -->
         <link rel="stylesheet" href="../css/main.css">
         <script src="../JS/index.js"></script>
-        <script src="../JS/watchlist.js"></script>
         <script src="../JS/movie.js"></script>
         
     </head>
@@ -50,7 +49,7 @@
 
         <!-------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- Page Content -->
-        <div class="container mt-5">
+        <div class="container mt-5" id="movieContainer">
             <!-- Side Content -->
             <div class="row mt-2">
                 <div class="col-12 col-md-6 mb-3 mt-5">
@@ -90,7 +89,7 @@
                                         
                                     </div>
                                     <button class="btn btn-primary m-3">Watch Now</button>
-                                    <button type="button" class="btn btn-primary m-3">Add to Watchlist</button>
+                                    <button type="button" class="btn btn-primary m-3" id="watchlistAddButton" onclick="addToWatchlist()">Add to Watchlist</button>
                                 </div>
                             </div>
                         </div>

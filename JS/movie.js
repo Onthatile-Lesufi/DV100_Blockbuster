@@ -1,15 +1,15 @@
 // --------------------------------------------------------------------
 // When the page loads
-$(document).ready(function (){
-    const urlParams = new URLSearchParams(window.location.search);
-    const dataId = urlParams.get('id');
+const urlParams = new URLSearchParams(window.location.search);
+const dataId = urlParams.get('id');
 
+$(document).ready(function (){
     if(dataId) {
         console.log(dataId);
         getMovieDetails(dataId);
     } else {
-        // Show error
-
+        $("#movieContainer").empty();
+        $("#movieContainer").append('<h2 id="empty">404<br>No movie found...<h2>');
     }
 });
 
@@ -38,8 +38,9 @@ function getMovieDetails(movieId) {
             $('#movieSideImage2').attr('src', "https://image.tmdb.org/t/p/original"+movie.backdrop_path);
             $('#movieSideImage3').attr('src', movie.backdrop_path);
         },
-        error: function(error){
-            console.log('Error:', error);
+        error: function(){
+            $("#movieContainer").empty();
+            $("#movieContainer").append('<h2 id="empty">404<br>No movie found...<h2>');
         }
     }) 
 
@@ -72,25 +73,41 @@ $(document).ready(function (){
         }
     })
 
-
-    loadMoviePosters = (movies) => {
-
-
-    };
-
 });   
 
     // --------------------------------------------------------------------
     // Add to watchlist
 
     $(document).ready(function(){
-
-        //Add to watchlist button click event
-        $(document).on("click", ".btn-btn-primary", function(){
-            let data =JSON.stringify(movie);
-            localStorage.setItem('movie', data);
-            $(this).console.log();
-        });
+        let added;
+        let watchlist = JSON.parse(localStorage.getItem('data'));
+        if (!(watchlist)) {                    
+            added = "Add to watchlist"
+        } else {
+            if ((watchlist.indexOf(dataId) >= 0)) {
+                added = "Already in watchlist"
+            } else {
+                added = "Add to watchlist"
+            }
+        }
+        $("#watchlistAddButton").text(added)
     });
+
+    addToWatchlist = () => {
+        let watchlist = JSON.parse(localStorage.getItem('data'));
+        if (!watchlist) {
+            localStorage.setItem('data', JSON.stringify([dataId]));
+        } else {
+            let arrMovies = watchlist;
+            console.log(arrMovies);
+            if (arrMovies.indexOf(dataId) < 0) {
+                arrMovies.push(dataId);
+            }
+            console.log(arrMovies);
+            localStorage.setItem('data', JSON.stringify(arrMovies));
+        }
+        $("#watchlistAddButton").empty();
+        $("#watchlistAddButton").text(`Already in watchlist`)
+    }
 
 

@@ -1,14 +1,14 @@
 // --------------------------------------------------------------------
 // When the page loads
-let watchlist = JSON.parse(localStorage.getItem('data'));
-console.log(watchlist)
+    let watchlist = JSON.parse(localStorage.getItem('data'));
+    console.log(watchlist)
 
     $(document).ready(function (){
         console.log(watchlist);
         if (watchlist) {
             showMovies(watchlist);
         } else {
-            $("#movieContainer").empty();
+            $(".moviesRow").remove();
             $("#movieContainer").append('<h2 id="empty">No movies in Watchlist...<h2>');
         }
 
@@ -28,6 +28,7 @@ console.log(watchlist)
 
     // Show Movies that were added to the watchlist
     showMovies = (movies) => {
+        $(".moviesRow").remove();
     
         const movieContainer = $('#movieContainer')
 
@@ -37,78 +38,50 @@ console.log(watchlist)
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    let movies = data.results;
-                    console.log(movies);
+                    let movieData = data;
                     const card =$(`
-                    <div class="col-12 col-md-6 mb-2 mt-3">
-                      <img src="https://image.tmdb.org/t/p/original${movie.image}" class="card-img watchlist-card-img" data-id='${movie.id}'>
-                    </div>
-                    <div class="col-12 col-md-6 mt-3">
-                        <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">${movie.title}</h3>
-                            <span class="badge rounded-pill text-bg-secondary">${movie.genres}</span>
-                            <span class="badge rounded-pill text-bg-secondary">${movie.genres}</span>
-                            <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: ${movie.release}</h6>
-                            <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: ${movie.runtime}</h6>
-                            <p class="card-text">${movie.description}</p>
-                            <a href="../pages/movie.html" class="btn btn-primary">View</a>
-                            <button type="button" class="btn-btn-danger m-3">Remove from Watchlist</button>
+                    <div class="row" id="moviesRow">
+                        <div class="col-12 col-md-6 mb-2 mt-3">
+                          <img src="https://image.tmdb.org/t/p/original${movieData.poster_path}" class="card-img watchlist-card-img" data-id='${movieData.id}'>
                         </div>
+                        <div class="col-12 col-md-6 mt-3">
+                            <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">${movieData.title}</h3>
+                                <span class="badge rounded-pill text-bg-secondary">${movieData.genres[0].name}</span>
+                                <span class="badge rounded-pill text-bg-secondary">${movieData.genres[1].name}</span>
+                                <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: ${movieData.release_date}</h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: ${movieData.runtime}</h6>
+                                <p class="card-text">${movieData.overview}</p>
+                                <button class="btn btn-primary" onclick="movieOpen(${movieData.id})">View</button>
+                                <button type="button" class="btn btn-danger m-3" onclick="removeMovie(${movieData.id},this)">Remove from Watchlist</button>
+                            </div>
+                            </div>
                         </div>
                     </div>`)
-                    card.click(function(){
-                    window.location.href = `../pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
-                    })
+                    // card.click(function(){
+                    // window.location.href = `../pages/movie.html?id=${$(this).find('.card').attr('data-id')}`;
+                    // })
                     console.log(movie);
                     movieContainer.append(card);
                 }
             });
-            
-
-             
-                
-        
-            
         });
-
-        // Older Code Below
-
-        for(let i = 0; i < 0; i++){
-            const card = $ (`
-            <div class="col-12 col-md-6 mb-2 mt-3">
-              <img src="https://image.tmdb.org/t/p/original${movies[i].poster_path}" class="card-img watchlist-card-img" data-id='${movie.id}'>
-            </div>
-            <div class="col-12 col-md-6 mt-3">
-                <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">${movies[i].title}</h3>
-                    <span class="badge rounded-pill text-bg-secondary">${movies[i].genres}</span>
-                    <span class="badge rounded-pill text-bg-secondary">${movies[i].genres}</span>
-                    <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Release Date: ${movies[i].release_date}</h6>
-                    <h6 class="card-subtitle mb-2 text-body-secondary pt-3">Run Time: ${movies[i].runtime}</h6>
-                    <p class="card-text">${movies[i].overview}</p>
-                    <a href="../pages/movie.html" class="btn btn-primary">View</a>
-                    <button type="button" class="btn-btn-danger m-3">Remove from Watchlist</button>
-                </div>
-                </div>
-            </div>
-            `) 
-            $('#moviesRow').append(card);
-        
-        }
     }
 
     
 // --------------------------------------------------------------------
 // Remove movie from watch-list
 
-$(document).ready(function(){
+    removeMovie = (id,button) => {
+        let arrMovies = watchlist;
+        console.log(id)
+        $(button).parentsUntil('#movieContainer').remove();
+        arrMovies.splice(watchlist.indexOf(id),1);
+        console.log(arrMovies);
+        localStorage.setItem('data', JSON.stringify(arrMovies));
+    }
 
-    //Remove button click event
-    $(document).on("click", ".btn-btn-danger", function(){
-        $(this).closest(".col-12").remove(".col-12");
-        $(this).closest(".card-img").remove();
-    });
-});
-
+    movieOpen = (id) => {
+        window.location.href = `movie.html?id=${id}`;
+    }

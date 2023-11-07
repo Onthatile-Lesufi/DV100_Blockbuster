@@ -346,11 +346,6 @@ p {
     float:right;
 }
 
-footer {
-    height: 30vh;
-    background-color: #3662D4;
-}
-
 /* ------------------------------------------------------------ */
 /* Bootstrap classes */
 .active {
@@ -852,7 +847,7 @@ label {
 }
 
 footer {
-    margin: 0;
+    height: 30vh;
     padding: 20px 0;
     background-color: #333;
     color: #fff;
