@@ -1,3 +1,5 @@
+let arrMovies;
+
 $(document).ready(function () {
     $.ajax({
         url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
@@ -45,7 +47,7 @@ $(document).ready(function () {
                             <p class="description">${movies[i].overview}</p>
                             <!--<p class="cast">Director: <br>Cast: </p>-->
                             <div class="button-group">
-                                <div id='info' data-id='${movies[i].id}'><h3>More Info</h3></div>
+                                <div id='info' data-id='${movies[i].id}' onclick='infoOpen(this)'><h3>More Info</h3></div>
                                 <div id="watchlist"><h3>Add to Watchlist</h3></div>
                             </div>
                         </div>
@@ -55,13 +57,17 @@ $(document).ready(function () {
             }
         }
     })
-
-    $('.button-group').on('click','#info',function(){
-        window.location.href = `pages/movie.html?id=${$(this).attr('data-id')}`;
-    })
 })
 
+infoOpen = (id) => {
+    let movieID = $(id).attr("data-id");
+    console.log('test')
+    window.location.href = `pages/movie.html?id=${movieID}`;
+}
 
+addToWatchlist = () => {
+    //
+}
 
 loadMovieCards = (movies) => {
     $('#movieRow').empty();

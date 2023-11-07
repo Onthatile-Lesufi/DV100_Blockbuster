@@ -148,12 +148,6 @@ footer {
     margin-top: 2vh;
 }
 
-.profile {
-    width: 3vw;
-    height: 6vh;
-    background-color: gainsboro;
-    border-radius: 50%;
-}
 
 .slide-img {
     height: 100vh;
@@ -476,6 +470,8 @@ footer {
     padding-top: 15vh;
 }
 
+
+
 .title {
     font-size: 6vh;
     text-align: left;
@@ -487,19 +483,20 @@ footer {
     margin-bottom: 2vw;
 }
 
-#button-group {
-    width: 20vh;
+.button-group {
+    width: 20vw;
+    height: 50px;
 }
 
 #info {
-    height: 5.5vh;
-    width: 15vh;
+    height: 60px;
+    width: 140px;
     text-align: center;
     float: left;
     margin-right: 1vw;
     background-color: #FFE960;
     color: #000000;
-    padding-top: 1.3vh;
+    padding-top: 12px;
     border-radius: 20px;
     margin-bottom: 1vh;
 }
@@ -513,8 +510,8 @@ footer {
 }
 
 #watchlist {
-    height: 5.5vh;
-    width: 19vh;
+    height: 60px;
+    width: 175px;
     text-align: center;
     float: left;
     background-color: #89DE56;
@@ -541,6 +538,70 @@ footer {
 
 .card-img-top {
     height: 50vh;
+}
+
+@media (max-width: 700px) {
+    .profile {
+        width: 40px;
+        height: 40px;
+        background-color: gainsboro;
+        border-radius: 50%;
+    }
+    .button-group {
+        width: 65vw;
+        height: 50px;
+    }
+    .carousel {
+        height: 50vh;
+    }
+    .slide-img {
+        height: 50vh;
+    }
+    .overlay {
+        width: 100vw;
+        height: 50vh;
+        padding-right: 15vw;
+        background: #3663d4a9;
+        margin-top: -50vh;
+        padding-top: 7vh;
+    } 
+    .title {
+        font-size: 4vh;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .description, .cast {
+        font-size: 1.5vh;
+        margin-bottom: 20px;
+        text-align: center;
+    } 
+    #info {
+        height: 40px;
+        width: 100px;
+        text-align: center;
+        margin-right: 20px;
+        padding-top: 7px;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+    }
+    #info h3 {
+        font-size: 2vh;
+    }
+    #watchlist {
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        background-color: #89DE56;
+        color: #000000;
+        padding-top: 6.5px;
+        border-radius: 10px;
+    }
+    #watchlist h3 {
+        font-size: 2vh;
+    }
+    .card-img-top {
+        height: 36vh;
+    }
 }
 
 /* ---------------------------------------------- */
@@ -576,9 +637,11 @@ footer {
     text-align: left;
 }
 
+.ratings {
+    text-align: center;
+}
+
 .library-row {
-    margin-top: 5vh;
-    /* float: left; */
     margin-bottom: 5vh;
 }
 
@@ -588,6 +651,22 @@ footer {
     margin-top: 5vh;
     margin-bottom: 2vh;
     text-align: left;
+}
+
+@media (max-width: 700px) {
+    #filter-group {
+        height: 10vh;
+        margin-top: 10vh;
+    }
+    .filter-button {
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+    }
+    .filter-button h3 {
+        font-size: 17px;
+        text-align: center;
+    }
 }
 
 
