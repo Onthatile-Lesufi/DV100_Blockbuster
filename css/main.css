@@ -148,12 +148,6 @@ footer {
     margin-top: 2vh;
 }
 
-.profile {
-    width: 3vw;
-    height: 6vh;
-    background-color: gainsboro;
-    border-radius: 50%;
-}
 
 .slide-img {
     height: 100vh;
@@ -866,3 +860,4 @@ footer {
 /* Style the links with a hover effect */
 .footer-links a:hover, .footer-social a:hover {
     text-decoration: underline;
+}
