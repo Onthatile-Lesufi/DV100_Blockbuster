@@ -2,9 +2,10 @@
 // When the page loads
 $(document).ready(function (){
     const urlParams = new URLSearchParams(window.location.search);
-    const dataId = urlParams.get('data-id');
+    const dataId = urlParams.get('id');
 
     if(dataId) {
+        console.log(dataId);
         getMovieDetails(dataId);
     } else {
         // Show error
@@ -13,7 +14,7 @@ $(document).ready(function (){
 });
 
 function getMovieDetails(movieId) {
-    const apiUrl = `https://api.themoviedb.org/3/movie/157336?api_key=4bdfdd167440b11eee82c213da4dd90b${movieId}`;
+    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=4bdfdd167440b11eee82c213da4dd90b`;
 
     $.ajax({
         url: apiUrl,
@@ -21,18 +22,20 @@ function getMovieDetails(movieId) {
         dataType: 'json',
         success: function(data) {
 
-            const movie = data.movie[0];
+            const movie = data;
         
-            console.log(data);
+            console.log(movie);
 
             $('#movieTitle').text(movie.original_title);
-            $('#movieRunTime').text(movie.runtime);
+            $('#movieRunTime').text(movie.runtime +" Minutes");
             $('#movieDescription').text(movie.overview);
-            $('#movieGenre1').text(movie.genres);
-            $('#movieGenre2').text(movie.genres);
-            $('#movieImage').attr('src', movie.poster_path);
-            $('#movieSideImage1').attr('src', movie.backdrop_path);
-            $('#movieSideImage2').attr('src', movie.backdrop_path);
+            $('#movieGenre1').text(movie.genres[0].name);
+            if (movie.genres.length > 1) {
+                $('#movieGenre2').text(movie.genres[1].name);
+            }
+            $('#movieImage').attr('src', "https://image.tmdb.org/t/p/original"+movie.poster_path);
+            $('#movieSideImage1').attr('src', "https://image.tmdb.org/t/p/original"+movie.poster_path);
+            $('#movieSideImage2').attr('src', "https://image.tmdb.org/t/p/original"+movie.backdrop_path);
             $('#movieSideImage3').attr('src', movie.backdrop_path);
         },
         error: function(error){

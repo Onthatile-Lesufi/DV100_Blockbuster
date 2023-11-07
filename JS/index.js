@@ -1,6 +1,6 @@
-let arrMovies;
-
 $(document).ready(function () {
+    
+
     $.ajax({
         url: 'https://api.themoviedb.org/3/trending/movie/day?api_key=33a910bf405b0e95e4f78d2f4f9b1567&primary_release_date=1990-10-12',
         type: 'GET',
@@ -24,6 +24,18 @@ $(document).ready(function () {
             console.log(movies[1]);
             for (let i=0;i<=2;i++){
                 console.log(movies[i]);
+                let added;
+                let watchlist = JSON.parse(localStorage.getItem('data'));
+                if (!(watchlist)) {                    
+                    added = "Add to watchlist"
+                } else {
+                    let movieID = movies[i].id;
+                    if ((watchlist.indexOf(+movieID) >= 0)) {
+                        added = "Already in watchlist"
+                    } else {
+                        added = "Add to watchlist"
+                    }
+                }
                 let hero = $(`
                 <div class="carousel-item" id='carouselItem'>
                     <img src="https://image.tmdb.org/t/p/original${movies[i].backdrop_path}" class="d-block w-100 slide-img" alt="...">
@@ -33,7 +45,7 @@ $(document).ready(function () {
                         <!--<p class="cast">Director: <br>Cast: </p>-->
                         <div class="button-group">
                             <div id='info' data-id='${movies[i].id}'><h3>More Info</h3></div>
-                            <div id="watchlist"><h3>Add to Watchlist</h3></div>
+                            <div id="watchlist" data-id='${movies[i].id}' onclick='addToWatchlist(this)'><h3>${added}</h3></div>
                         </div>
                     </div>
                 </div>`)
@@ -48,7 +60,7 @@ $(document).ready(function () {
                             <!--<p class="cast">Director: <br>Cast: </p>-->
                             <div class="button-group">
                                 <div id='info' data-id='${movies[i].id}' onclick='infoOpen(this)'><h3>More Info</h3></div>
-                                <div id="watchlist" data-id='${movies[i].id}' onclick='addToWatchlist(this)'><h3>Add to Watchlist</h3></div>
+                                <div id="watchlist" data-id='${movies[i].id}' onclick='addToWatchlist(this)'><h3>${added}</h3></div>
                             </div>
                         </div>
                     </div>`)
@@ -66,8 +78,24 @@ infoOpen = (id) => {
 }
 
 addToWatchlist = (id) => {
-    //
+    let watchlist = JSON.parse(localStorage.getItem('data'));
+    let movieID = $(id).attr("data-id");
+    if (!watchlist) {
+        localStorage.setItem('data', JSON.stringify([+movieID]));
+    } else {
+        let arrMovies = watchlist;
+        console.log(arrMovies);
+        if (arrMovies.indexOf(+movieID) < 0) {
+            arrMovies.push(+movieID);
+        }
+        console.log(arrMovies);
+        localStorage.setItem('data', JSON.stringify(arrMovies));
+    }
+    $(id).empty();
+    $(id).append(`<h3>Already in watchlist</h3>`)
 }
+
+
 
 loadMovieCards = (movies) => {
     $('#movieRow').empty();
