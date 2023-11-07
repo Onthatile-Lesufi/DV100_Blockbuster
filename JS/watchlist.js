@@ -114,3 +114,14 @@ $(document).ready(function(){
     });
 });
 
+// --------------------------------------------------------------------
+// Save movie information to localStorage
+
+$(document).ready(function(){
+    //Save information to storage
+    const movies = $('#movieContainer').val();
+
+    //Store data 
+    localStorage.setItem('movies', movies);
+
+});
