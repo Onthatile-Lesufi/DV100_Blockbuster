@@ -35,11 +35,10 @@ Demo Video Link
 
 BlockBuster is a responsive site, where a user can enjoy the nostalgic feelings of the orgininal BlockBuster movies online. BlockBuster also allows you to search and add movies to your very own watchlist!
   * Sign Up
-        (image )
+        ![Sign in page](../DV100_Blockbuster/assets/Page%20screenshots/SIGN%20UP.png); 
 
   *  Sign In
-        (image )
-     
+        ![Sign in page](../DV100_Blockbuster/assets/Page%20screenshots/LOGIN.png);     
   *  Home
       (image)
       
