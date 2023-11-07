@@ -48,7 +48,7 @@ $(document).ready(function () {
                             <!--<p class="cast">Director: <br>Cast: </p>-->
                             <div class="button-group">
                                 <div id='info' data-id='${movies[i].id}' onclick='infoOpen(this)'><h3>More Info</h3></div>
-                                <div id="watchlist"><h3>Add to Watchlist</h3></div>
+                                <div id="watchlist" data-id='${movies[i].id}' onclick='addToWatchlist(this)'><h3>Add to Watchlist</h3></div>
                             </div>
                         </div>
                     </div>`)
@@ -65,7 +65,7 @@ infoOpen = (id) => {
     window.location.href = `pages/movie.html?id=${movieID}`;
 }
 
-addToWatchlist = () => {
+addToWatchlist = (id) => {
     //
 }
 

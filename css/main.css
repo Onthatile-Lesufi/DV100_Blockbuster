@@ -546,6 +546,74 @@ footer {
     height: 50vh;
 }
 
+
+@media (max-width: 991px) {
+    .profile {
+        width: 40px;
+        height: 40px;
+        background-color: gainsboro;
+        border-radius: 50%;
+    }
+    .button-group {
+        width: 65vw;
+        height: 50px;
+    }
+    .carousel {
+        height: 70vh;
+    }
+    .slide-img {
+        height: 70vh;
+    }
+    .overlay {
+        width: 90vw;
+        height: 70vh;
+        padding-right: 15vw;
+        background: #3662D4;
+        background: linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
+        background: -webkit-linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
+        background: -moz-linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
+        margin-top: -70vh;
+        padding-top: 7vh;
+    } 
+    .title {
+        font-size: 60px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+    .description, .cast {
+        font-size:20px;
+        margin-bottom: 20px;
+        text-align: left;
+    } 
+    #info {
+        height: 40px;
+        width: 100px;
+        text-align: center;
+        margin-right: 20px;
+        padding-top: 7px;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+    }
+    #info h3 {
+        font-size: 2vh;
+    }
+    #watchlist {
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        background-color: #89DE56;
+        color: #000000;
+        padding-top: 6.5px;
+        border-radius: 10px;
+    }
+    #watchlist h3 {
+        font-size: 2vh;
+    }
+    .card-img-top {
+        height: 50vh;
+    }
+}
+
 @media (max-width: 700px) {
     .profile {
         width: 40px;
@@ -609,7 +677,6 @@ footer {
         height: 36vh;
     }
 }
-
 /* ---------------------------------------------- */
 #movieCard:hover {
     cursor: pointer;
@@ -866,3 +933,4 @@ footer {
 /* Style the links with a hover effect */
 .footer-links a:hover, .footer-social a:hover {
     text-decoration: underline;
+}
