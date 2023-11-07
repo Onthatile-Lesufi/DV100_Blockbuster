@@ -303,6 +303,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* Common Styles ------------------------------------------------------*/
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -332,10 +333,18 @@ label {
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    width: 70%;
-    margin-left: 150px;
+    width: 100%;
+    margin-left: 0px;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .button-su {
+      width: 80%; 
+      margin-left: 50px; 
+    }
+  }
+
 
 .button-si{
     background-color: #89DE56;
@@ -344,11 +353,15 @@ label {
     border-radius: px;
     padding: 30px 100px;
     cursor: pointer;
-    width: 110%;
-    margin-left: -50px;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: -150px;
 }
+@media (max-width: 768px) {
+    .button-si {
+      padding: 10px 20px;
+    }
+  }
 
 
 .button-su:hover
@@ -448,7 +461,10 @@ footer {
     text-decoration: none;
 }
 
-/* Style the links with a hover effect */
 .footer-links a:hover, .footer-social a:hover {
     text-decoration: underline;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
