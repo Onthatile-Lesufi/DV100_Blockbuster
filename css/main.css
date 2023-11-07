@@ -624,7 +624,7 @@ label {
     padding: 10px 20px;
     cursor: pointer;
     width: 70%;
-    margin-left: 50px;
+    margin-left: 150px;
     margin-top: 20px;
 }
 
@@ -635,7 +635,7 @@ label {
     border-radius: px;
     padding: 30px 100px;
     cursor: pointer;
-    width: 100%;
+    width: 110%;
     margin-left: -50px;
     margin-top: 20px;
     margin-bottom: -150px;
@@ -655,9 +655,8 @@ label {
 }
 
 .or-text{
-    padding-left: 0px;
     padding-top: 10px;
-    margin: 10px 0;
+    text-align: center;
 }
 
 .button-si:hover {
@@ -670,7 +669,7 @@ label {
 
 /* Form Container Styles ------------------------------------------------*/
 .container-form-su {
-    background-color: #0056b3;
+    background: linear-gradient(to bottom, #0056b3, #89DE56);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
