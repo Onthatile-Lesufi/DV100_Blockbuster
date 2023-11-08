@@ -517,10 +517,6 @@ p {
     cursor: pointer;
 }
 
-.profile:hover {
-    cursor: pointer;
-}
-
 .card {
     margin-top: 5vh;
 }
@@ -529,14 +525,14 @@ p {
     height: 50vh;
 }
 
-
 @media (max-width: 991px) {
-    .profile {
+    /* .profile {
         width: 40px;
         height: 40px;
         background-color: gainsboro;
         border-radius: 50%;
-    }
+    } */
+    
     .button-group {
         width: 65vw;
         height: 50px;
@@ -556,7 +552,7 @@ p {
         background: -webkit-linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
         background: -moz-linear-gradient(0deg,#3662D4 0%, rgba(54,98,212,0.62) 60%, rgba(54,98,212,0) 100%);
         margin-top: -70vh;
-        padding-top: 7vh;
+        padding-top: 10vh;
     } 
     .title {
         font-size: 60px;
@@ -598,12 +594,6 @@ p {
 }
 
 @media (max-width: 700px) {
-    .profile {
-        width: 40px;
-        height: 40px;
-        background-color: gainsboro;
-        border-radius: 50%;
-    }
     .button-group {
         width: 65vw;
         height: 50px;
@@ -620,7 +610,7 @@ p {
         padding-right: 15vw;
         background: #3663d4a9;
         margin-top: -50vh;
-        padding-top: 7vh;
+        padding-top: 10vh;
     } 
     .title {
         font-size: 4vh;
@@ -725,13 +715,16 @@ p {
     }
 }
 
-
 /* --------------------------------------------------------------------- */
 #empty{
     color: white;
     margin-top: 30vh;
     margin-bottom: 60vh;
     font-size: 74px;
+}
+
+#movieContainer {
+    margin-top: 10vh;
 }
 
 /*Forms styling-----------------------------------------------------------*/
@@ -767,7 +760,7 @@ label {
     padding: 10px 20px;
     cursor: pointer;
     width: 70%;
-    margin-left: 150px;
+    margin-left: 5.5vw;
     margin-top: 20px;
 }
 
@@ -779,7 +772,7 @@ label {
     padding: 30px 100px;
     cursor: pointer;
     width: 110%;
-    margin-left: -50px;
+    margin-left: -27px;
     margin-top: 20px;
     margin-bottom: -150px;
 }
@@ -818,6 +811,7 @@ label {
     padding: 20px;
     width: 80%;
     margin: 50px auto;
+    margin-top: 120px;
 }
 
 .col-box-form {
@@ -828,7 +822,6 @@ label {
     border: #333 2px;
     margin: 0 auto;
     padding-top: 200px;
-    padding-left: 50px;
     background-image: url(../assets/Logo.jpg);
     background-position: center;
     background-size: cover;
