@@ -298,9 +298,6 @@ footer {
 /*Forms styling-----------------------------------------------------------*/
 /*Sign Up----------*/
 /* Base Classes --------------------------------------------------------*/
-h1, h2, h3, h4, h5, p {
-    font-family: 'Bebas Neue', sans-serif;
-}
 
 /* Common Styles ------------------------------------------------------*/
 
@@ -463,8 +460,9 @@ footer {
 
 .footer-links a:hover, .footer-social a:hover {
     text-decoration: underline;
-<<<<<<< Updated upstream
 }
-=======
+
+.forgot-password{
+    color: #0056b3;
+    font-family: 'Bebas Neue', sans-serif;
 }
->>>>>>> Stashed changes
