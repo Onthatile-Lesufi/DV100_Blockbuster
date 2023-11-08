@@ -819,9 +819,10 @@ footer {
 
 
 .link-opacity-75 {
-    padding-left: 390px;
-    color: white;
+    padding-left:px;
+    color: #0056b3;
     margin-top: -100px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 footer {
