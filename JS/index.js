@@ -93,7 +93,7 @@ $(document).ready(function() {
         } else {
             const password = $('#password').val();
             if (isPasswordValid(password)) {
-                this.submit(); // Continue form submission if password is valid
+                this.submit(); 
             } else {
                 $('#password-error').text('Password must contain at least one capital letter and one number.');
                 $('#password').addClass('is-invalid');
@@ -103,7 +103,7 @@ $(document).ready(function() {
     });
 
     function isPasswordValid(password) {
-        // Define a regular expression to check for a capital letter and a number
+        // password must contain a capital letter and number
         const regex = /^(?=.*[A-Z])(?=.*\d)/;
         return regex.test(password);
     }
