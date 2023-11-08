@@ -4,7 +4,7 @@
 This project aims at showcasing the skills and work that we as a group had learnt and done throughout the course of the year, as well as term 4. 
 
 [Video Link]
-Demo Video Link
+https://vimeo.com/882436013?ts=65000&share=copy
 
 # Table of Contents
 
@@ -34,22 +34,24 @@ Demo Video Link
 # About the Project
 
 BlockBuster is a responsive site, where a user can enjoy the nostalgic feelings of the orgininal BlockBuster movies online. BlockBuster also allows you to search and add movies to your very own watchlist!
+
+Pages can be found in assets under screenshots.
   * Sign Up
-        ![Sign in page](../DV100_Blockbuster/assets/Page%20screenshots/SIGN%20UP.png); 
+   
 
   *  Sign In
-        ![Sign in page](../DV100_Blockbuster/assets/Page%20screenshots/LOGIN.png);     
+      
   *  Home
-      (image)
+     
       
   * Library
-      (image)
+     
           
   * Watchlist
-      (image )
+     
 
  * Individual Movie
-      (image )
+     
    
 # Built With 
 * Javascript
