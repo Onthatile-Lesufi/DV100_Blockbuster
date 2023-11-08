@@ -5,6 +5,7 @@ This project aims at showcasing the skills and work that we as a group had learn
 
 [Video Link]
 https://vimeo.com/882436013?ts=65000&share=copy
+or take a look at our assets, and you'll find a video there
 
 # Table of Contents
 
