@@ -444,7 +444,7 @@ p {
 }
 
 .overlay {
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: -100vh;
@@ -468,6 +468,7 @@ p {
 }
 
 .description, .cast {
+    width: 50vw;
     font-size: 2vh;
     margin-bottom: 2vw;
 }
@@ -560,6 +561,7 @@ p {
         color: #FFFFFF;
     }
     .description, .cast {
+        width: 50vw;
         font-size:20px;
         margin-bottom: 20px;
         text-align: left;
@@ -618,6 +620,7 @@ p {
         color: #FFFFFF;
     }
     .description, .cast {
+        width: 67vw;
         font-size: 1.5vh;
         margin-bottom: 20px;
         text-align: center;
