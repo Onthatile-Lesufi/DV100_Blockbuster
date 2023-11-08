@@ -50,6 +50,16 @@ BlockBuster is a responsive site, where a user can enjoy the nostalgic feelings 
 
  * Individual Movie
       (image )
+
+### Installing
+
+1. Clone the repo
+```sh
+git clone https://github.com/Onthatile-Lesufi/DV100_Blockbuster.git
+```
+2. Open the project
+
+Use `Open Workspace` in Visual Studio.
    
 # Built With 
 * Javascript
@@ -60,9 +70,9 @@ BlockBuster is a responsive site, where a user can enjoy the nostalgic feelings 
 # Contributing
 
 1. Fork the Project
-2. Create your Feature Branch ('git checkout - b feature/AmazingFeature')
-3. Commit your Changes ('git commit - m 'Add some AmazingFeature'')
-4. Push to the Branch ('git push origin feature/AmazingFeature')
+2. Create your Feature Branch (`git checkout - b feature AmazingFeature`)
+3. Commit your Changes (`git commit - m 'Add some AmazingFeature`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 # Authors
