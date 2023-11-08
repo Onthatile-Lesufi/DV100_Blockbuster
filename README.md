@@ -1,6 +1,6 @@
 # DV100_Blockbuster
 
-(IMG with logo)
+![ReadMeLogo](/assets/ReadMe_Backdrop.png)
 This project aims at showcasing the skills and work that we as a group had learnt and done throughout the course of the year, as well as term 4. 
 
 [Video Link]
@@ -35,22 +35,22 @@ Demo Video Link
 
 BlockBuster is a responsive site, where a user can enjoy the nostalgic feelings of the orgininal BlockBuster movies online. BlockBuster also allows you to search and add movies to your very own watchlist!
   * Sign Up
-        (image )
+       ![Movie](/assets/Page_screenshots/LOGIN.png)
 
   *  Sign In
-        (image )
+       ![Movie](/assets/Page_screenshots/SIGN-UP.png)
      
   *  Home
-      (image)
+      ![Movie](/assets/Page_screenshots/Home.png)
       
   * Library
-      (image)
+      ![Movie](/assets/Page_screenshots/Library.png)
           
   * Watchlist
-      (image )
+      ![Movie](/assets/Page_screenshots/Watch-list.png)
 
  * Individual Movie
-      (image )
+      ![Movie](/assets/Page_screenshots/Individual_Movie.png)
    
 # Built With 
 * Javascript
